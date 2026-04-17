@@ -11,7 +11,7 @@ export default {
                 </div>
                 <div class="mob-upcoming-hero-stat">
                     <span class="mob-upcoming-stat-value">{{ lbList.length }}</span>
-                    <span class="mob-upcoming-stat-label">tracked</span>
+                    <span class="mob-upcoming-stat-label">levels</span>
                 </div>
             </div>
             <div v-for="([level, err], i) in lbList" :key="i" class="mob-level-row">

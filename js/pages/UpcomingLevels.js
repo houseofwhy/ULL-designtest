@@ -14,7 +14,7 @@ export default {
     grid-column: 1 / -1;
     overflow-y: unset !important;
     display: flex; align-items: center; justify-content: space-between; gap: 2rem;
-    padding: 1rem 2rem 1rem 1.75rem;
+    padding: 1rem 1.25rem 1rem 1.75rem;
     border-bottom: 1px solid rgba(128,128,128,0.15);
     background: linear-gradient(105deg, rgba(102,10,239,0.07) 0%, transparent 55%);
     position: relative;
@@ -27,20 +27,22 @@ export default {
 .upcoming-hero-badge {
     display: inline-block;
     font-family: "Lexend Deca", sans-serif; font-size: 0.6rem; font-weight: 700;
-    text-transform: uppercase; letter-spacing: 0.12em;
+    text-transform: uppercase; letter-spacing: 0.08em;
     color: color-mix(in srgb, var(--color-primary) 65%, white);
-    background: rgba(102,10,239,0.1); padding: 0.15rem 0.6rem; border-radius: 2rem; margin-bottom: 0.35rem;
+    background: rgba(102,10,239,0.1); padding: 0.15rem 0.6rem; border-radius: 2rem; margin-bottom: 0.5rem;
 }
 .root.dark .upcoming-hero-badge { color: color-mix(in srgb, var(--color-primary) 65%, black); }
 .upcoming-hero h1 {
     font-family: "Lexend Deca", sans-serif; font-size: 1.15rem; font-weight: 700;
-    color: var(--color-on-background); line-height: 1.2; margin: 0 0 0.3rem;
+    letter-spacing: normal;
+    color: var(--color-on-background); line-height: 1.2; margin: 0 0 0.45rem;
 }
 .upcoming-hero h1::before, .upcoming-hero h1::after { display: none; }
 .upcoming-hero p {
-    font-family: "Lexend Deca", sans-serif; font-size: 0.78rem;
+    font-family: "Lexend Deca", sans-serif; font-size: 0.78rem; letter-spacing: normal;
     color: var(--color-on-background); opacity: 0.5; line-height: 1.55; margin: 0; max-width: 500px;
 }
+.upcoming-hero p::before, .upcoming-hero p::after { display: none !important; }
 .upcoming-hero-stat {
     flex-shrink: 0; display: flex; flex-direction: column; align-items: center; text-align: center;
     padding: 0.6rem 1.2rem; border-radius: 0.65rem;
@@ -53,7 +55,7 @@ export default {
 .root.dark .upcoming-hero-stat-value { color: color-mix(in srgb, var(--color-primary) 65%, black); }
 .upcoming-hero-stat-label {
     font-family: "Lexend Deca", sans-serif; font-size: 0.58rem; font-weight: 600;
-    text-transform: uppercase; letter-spacing: 0.08em; opacity: 0.4; margin-top: 0.25rem;
+    text-transform: uppercase; letter-spacing: 0.06em; opacity: 0.4; margin-top: 0.25rem;
 }
 </component>
     <main v-if="loading" class="surface" style="display:flex;align-items:center;justify-content:center;">
@@ -68,7 +70,7 @@ export default {
             </div>
             <div class="upcoming-hero-stat">
                 <span class="upcoming-hero-stat-value">{{ list.length }}</span>
-                <span class="upcoming-hero-stat-label">Levels Tracked</span>
+                <span class="upcoming-hero-stat-label">levels total</span>
             </div>
         </div>
         <div class="list-container-new surface">
