@@ -23,9 +23,9 @@ export default {
     <main v-else class="page-list-new page-with-hero">
         <div class="page-hero">
             <div class="page-hero-content">
-                <div class="page-hero-badge">Main List</div>
+                <div class="page-hero-badge">.../#/listmain</div>
                 <h1>Main List</h1>
-                <p>Levels projected to enter the top 150 of the Demonlist upon verification.</p>
+                <p>The Main List highlights levels that meet the fundamental standards required to be considered for an official rating by the developer (“Rate”). It acts as a curated filter for higher-potential candidates.</p>
             </div>
             <div class="page-hero-stat">
                 <span class="page-hero-stat-value">{{ list.length }}</span>

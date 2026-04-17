@@ -23,9 +23,9 @@ export default {
     <main v-else class="page-list-new page-with-hero">
         <div class="page-hero">
             <div class="page-hero-content">
-                <div class="page-hero-badge">All Levels</div>
+                <div class="page-hero-badge">.../#/list</div>
                 <h1>All Levels</h1>
-                <p>Every level tracked for future placement on the Geometry Dash Demonlist.</p>
+                <p>This tier serves as the most comprehensive catalogue, featuring the largest number of levels and the lowest inclusion threshold. Its purpose is to list every level that has a conceivable chance of being verified and published, providing a broad overview of the upcoming landscape.</p>
             </div>
             <div class="page-hero-stat">
                 <span class="page-hero-stat-value">{{ list.length }}</span>
