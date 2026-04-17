@@ -25,7 +25,7 @@ export default {
             <div class="page-hero-content">
                 <div class="page-hero-badge">.../#/list</div>
                 <h1>All Levels</h1>
-                <p>This tier serves as the most comprehensive catalogue, featuring the largest number of levels and the lowest inclusion threshold. Its purpose is to list every level that has a conceivable chance of being verified and published, providing a broad overview of the upcoming landscape.</p>
+                <p>The most comprehensive tier, offering the largest level count and lowest bar for entry. It catalogues every level with a conceivable shot at verification, mapping the broader upcoming landscape.</p>
             </div>
             <div class="page-hero-stat">
                 <span class="page-hero-stat-value">{{ list.length }}</span>
