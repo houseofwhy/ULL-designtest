@@ -10,7 +10,14 @@ export default {
     <main v-if="loading" class="surface" style="display:flex;align-items:center;justify-content:center;">
         <Spinner></Spinner>
     </main>
-    <main v-else class="page-list-new page-leaderboard">
+    <main v-else class="page-list-new page-leaderboard page-with-hero">
+        <div class="page-hero">
+            <div class="page-hero-content">
+                <div class="page-hero-badge">Leaderboard</div>
+                <h1>Leaderboard</h1>
+                <p>Top players ranked by their records on upcoming and unverified Demonlist levels.</p>
+            </div>
+        </div>
         <div class="list-container-new surface">
             <div class="search-row search-row--leaderboard">
                 <input v-model="search" class="search-new" type="text" placeholder="Search players..." />

@@ -20,7 +20,14 @@ export default {
     <main v-if="loading" class="surface" style="display:flex;align-items:center;justify-content:center;">
         <Spinner></Spinner>
     </main>
-    <main v-else class="page-list-new">
+    <main v-else class="page-list-new page-with-hero">
+        <div class="page-hero">
+            <div class="page-hero-content">
+                <div class="page-hero-badge">Main List</div>
+                <h1>Main List</h1>
+                <p>Levels projected to enter the top 150 of the Demonlist upon verification.</p>
+            </div>
+        </div>
         <div class="list-container-new surface">
             <div class="search-row">
                 <input v-model="search" class="search-new" type="text" placeholder="Search levels..." />

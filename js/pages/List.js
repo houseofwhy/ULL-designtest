@@ -20,7 +20,14 @@ export default {
     <main v-if="loading" class="surface" style="display:flex;align-items:center;justify-content:center;">
         <Spinner></Spinner>
     </main>
-    <main v-else class="page-list-new">
+    <main v-else class="page-list-new page-with-hero">
+        <div class="page-hero">
+            <div class="page-hero-content">
+                <div class="page-hero-badge">All Levels</div>
+                <h1>All Levels</h1>
+                <p>Every level tracked for future placement on the Geometry Dash Demonlist.</p>
+            </div>
+        </div>
         <div class="list-container-new surface">
             <div class="search-row">
                 <input v-model="search" class="search-new" type="text" placeholder="Search levels..." />

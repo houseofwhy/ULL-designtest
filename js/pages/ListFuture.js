@@ -20,7 +20,14 @@ export default {
     <main v-if="loading" class="surface" style="display:flex;align-items:center;justify-content:center;">
         <Spinner></Spinner>
     </main>
-    <main v-else class="page-list-new">
+    <main v-else class="page-list-new page-with-hero">
+        <div class="page-hero">
+            <div class="page-hero-content">
+                <div class="page-hero-badge">Future List</div>
+                <h1>Future List</h1>
+                <p>Levels expected to place beyond the top 150 — the next wave of Extreme Demons.</p>
+            </div>
+        </div>
         <div class="list-container-new surface">
             <div class="search-row">
                 <input v-model="search" class="search-new" type="text" placeholder="Search levels..." />
