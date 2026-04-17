@@ -469,6 +469,42 @@ main.page-list--pending .list-container {
     justify-content: center;
 }
 
+/* Shared list page hero */
+.page-list-new.page-with-hero { grid-template-rows: auto 1fr; }
+.page-hero {
+    grid-column: 1 / -1;
+    overflow-y: unset !important;
+    display: flex; align-items: center; gap: 2rem;
+    padding: 1rem 1.25rem 1rem 1.75rem;
+    border-bottom: 1px solid rgba(128,128,128,0.15);
+    background: linear-gradient(105deg, rgba(102,10,239,0.07) 0%, transparent 55%);
+    position: relative;
+}
+.page-hero::before {
+    content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
+    background: linear-gradient(180deg, var(--color-primary) 0%, color-mix(in srgb, var(--color-primary) 30%, transparent) 100%);
+}
+.page-hero-content { flex: 1; min-width: 0; }
+.page-hero-badge {
+    display: inline-block;
+    font-family: "Lexend Deca", sans-serif; font-size: 0.6rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.08em;
+    color: color-mix(in srgb, var(--color-primary) 65%, white);
+    background: rgba(102,10,239,0.1); padding: 0.15rem 0.6rem; border-radius: 2rem; margin-bottom: 0.5rem;
+}
+.root.dark .page-hero-badge { color: color-mix(in srgb, var(--color-primary) 65%, black); }
+.page-hero h1 {
+    font-family: "Lexend Deca", sans-serif; font-size: 1.15rem; font-weight: 700;
+    letter-spacing: normal;
+    color: var(--color-on-background); line-height: 1.2; margin: 0 0 0.45rem;
+}
+.page-hero h1::before, .page-hero h1::after { display: none; }
+.page-hero p {
+    font-family: "Lexend Deca", sans-serif; font-size: 0.78rem; letter-spacing: normal;
+    color: var(--color-on-background); opacity: 0.5; line-height: 1.55; margin: 0; max-width: 500px;
+}
+.page-hero p::before, .page-hero p::after { display: none !important; }
+
 /* Upcoming Levels Hero */
 .page-upcoming { grid-template-rows: auto 1fr; }
 .upcoming-hero {
