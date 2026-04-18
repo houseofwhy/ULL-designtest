@@ -23,9 +23,9 @@ export default {
     <main v-else class="page-list-new page-with-hero">
         <div class="page-hero">
             <div class="page-hero-content">
-                <div class="page-hero-badge">Future List</div>
+                <div class="page-hero-badge">.../#/listfuture</div>
                 <h1>Future List</h1>
-                <p>Levels expected to place beyond the top 150 — the next wave of Extreme Demons.</p>
+                <p>This tier functions as a focused preview, listing only levels with a very high likelihood of soon verification and publication. It represents the most immediate and probable future additions to the Demonlist.</p>
             </div>
             <div class="page-hero-stat">
                 <span class="page-hero-stat-value">{{ list.length }}</span>

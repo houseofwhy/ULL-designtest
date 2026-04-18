@@ -220,7 +220,7 @@
 <h4>Main List</h4>
 <p>Serving a similar purpose as the \u201cAll Levels\u201d tier but with more stringent criteria, the Main List highlights levels that meet the fundamental standards required to be considered for an official rating by the developer (\u201cRate\u201d). It acts as a curated filter for higher-potential candidates.</p>
 <h4>Future List</h4>
-<p>This tier maintains the highest standards of the three. It functions as a focused preview, listing only levels with a very high likelihood of soon verification and publication. It represents the most immediate and probable future additions to the official demonlist.</p>
+<p>This tier maintains the highest standards of the three. It functions as a focused preview, listing only levels with a very high likelihood of soon verification and publication. It represents the most immediate and probable future additions to the demonlist.</p>
                 `
             },
             {
