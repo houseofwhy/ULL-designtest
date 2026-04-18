@@ -151,8 +151,7 @@
     overflow: hidden;
 }
 .home-changes {
-    flex: 1;
-    min-height: 0;
+    height: 354px;
     overflow-y: auto;
     scrollbar-width: thin;
     border: 1px solid rgba(128,128,128,0.1);
