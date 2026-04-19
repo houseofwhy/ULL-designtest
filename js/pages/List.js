@@ -37,7 +37,7 @@ export default {
                 <input v-model="search" class="search-new" type="text" placeholder="Search levels..." />
                 <button class="filters-btn" @click="showFilters = true">Filters</button>
             </div>
-            <table class="list" v-if="list">
+            <table class="list" v-if="list && !noResults">
                 <tr v-for="([level, err], i) in list" :class="{ 'level-hidden': level?.isHidden }">
                     <td class="rank">
                         <span :class="{ 'rank-verified': level?.isVerified }">
@@ -359,6 +359,14 @@ export default {
                 const matchesBenchmark = !store.benchmarkMode || !level.isVerified || level.benchmark === true;
                 level.isHidden = !(matchesSearch && matchesTags && matchesDecorationFinal && matchesVerification && matchesBenchmark);
             });
+            this.autoSelectFirst();
+        },
+        autoSelectFirst() {
+            if (!this.list) return;
+            const cur = this.list[this.selected]?.[0];
+            if (cur && !cur.isHidden) return;
+            const first = this.list.findIndex(([level]) => level && !level.isHidden);
+            if (first !== -1) this.selected = first;
         },
         resetFilters() {
             this.statusFilters.forEach(f => f.active = false);
