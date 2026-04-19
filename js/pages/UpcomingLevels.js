@@ -6,7 +6,7 @@ import Spinner from '../components/Spinner.js';
 import LevelAuthors from '../components/List/LevelAuthors.js';
 
 function upcomingScore(maxPercent, maxRunDiff, rank) {
-    return Math.max(maxPercent, maxRunDiff) ** 2 + Math.min(maxPercent, maxRunDiff) ** 1.8;
+    return (Math.max(maxPercent, maxRunDiff) ** 2 + Math.min(maxPercent, maxRunDiff) ** 1.8) * ((0.01 * (rank+100)) ** 0.5);
 }
 
 export default {
@@ -57,7 +57,7 @@ export default {
         <div class="level-container-new surface">
             <div class="level" v-if="selectedLevel">
                 <h1>{{ selectedLevel.name }}</h1>
-                <div v-if="selectedLevel.allLevelsRank || selectedLevel.mainRank || selectedLevel.futureRank" style="display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap;font-family:'Lexend Deca',sans-serif;font-size:0.72rem;opacity:0.45;margin-top:0.25rem;margin-bottom:0.5rem;">
+                <div v-if="selectedLevel.allLevelsRank || selectedLevel.mainRank || selectedLevel.futureRank" style="display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap;font-family:'Lexend Deca',sans-serif;font-size:0.92rem;opacity:0.45;margin-top:-1rem;margin-bottom:0.5rem;">
                     <span v-if="selectedLevel.allLevelsRank">#{{ selectedLevel.allLevelsRank }} in All Levels</span>
                     <span v-if="selectedLevel.mainRank">· #{{ selectedLevel.mainRank }} in Main List</span>
                     <span v-if="selectedLevel.futureRank">· #{{ selectedLevel.futureRank }} in Future List</span>
